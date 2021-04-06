@@ -83,15 +83,14 @@
 
 let array = [1,2,3,4,5];
 
-function  toString(array, callback){
+function  getString(array, callback){
    let resultString = '';
-   array.forEach(element => {
-     resultString += callback (element);
-
-   });
-   return resultString;
+  strings =  array.map(function (element){
+   return callback(element * 2);
+  });
+   return strings.join();
 }
-console.log (toString (array,numberToString));
+console.log (getString (array,numberToString));
 
 function numberToString(number) {
    return String(number);
