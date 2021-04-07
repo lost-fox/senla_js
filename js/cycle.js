@@ -1,45 +1,45 @@
  // 1 В строке "Я стану крутым программистом" сделать первую букву каждого слова в верхнем регистре"
-//  let str= 'Я стану крутым программистом';
-//  let x='';
+ let str= 'Я стану крутым программистом';
+ let upLetter='';
 
-//    for (i = 0; i < str.length; i++) {
-//    if (str[i-1] === " ") {
-//       x += str[i].toUpperCase();
-//    } else {
-//    x += str[i];
-//    }
-//    }
-// console.log (x);
+   for (i = 0; i < str.length; i++) {
+   if (str[i-1] === " ") {
+      upLetter += str[i].toUpperCase();
+   } else {
+      upLetter += str[i];
+   }
+   }
+console.log (upLetter);
 
 //2 Вычислить факториал числа 9 (факториал числа - это произведение всех натуральных чисел от 1 до n включительно. например, 2! = 21 или 6! = 654321) .
 
-// let number = 9;
-// let factorial = 1;
+let number = 9;
+let factorial = 1;
 
-// for (let i= 1; i<=number; i++){
-//    factorial *=i;
-// }
+for (let i= 1; i<=number; i++){
+   factorial *=i;
+}
 
-// console.log (factorial);
+console.log (factorial);
 
 //3 Создать строку "Просветление наступит через: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1"
 
-// let string = 'Просветление наступит через: ';
-// let finish = 10;
+let stringCounting = 'Просветление наступит через: ';
+let finish = 10;
 
-// for (let i=finish; i>=1; i--){
-//   string += i + ", ";
-// }
+for (let i=finish; i>=1; i--){
+   stringCounting += i + ", ";
+}
 
-// console.log (string.slice(0,-2));
+console.log (stringCounting.slice(0,-2));
 
 //4 Найти и вывести в консоль все нечетные числа от 1 до 20 включительно.
 
-// for (let i=1; i<=20; i++){
-//    if (i % 2 == 1){
-//       console.log(i);
-//    }
-// }
+for (let i=1; i<=20; i++){
+   if (i % 2 == 1){
+      console.log(i);
+   }
+}
 
 //5 На основе строки "теперь я мастер циклов javascript" создать новую строку, где первые буквы каждого слова будут в верхнем регистре и будут отсутствовать пробелы. 
 
