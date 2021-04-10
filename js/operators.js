@@ -103,8 +103,8 @@ switch(animal){
 // let x = null || 0 || 1;
 //x = 1 => false ИЛИ false ИЛИ true  вернул значение true
 
-// let x = null && 0 && 1;
-//x = 0 => false И false И true вернул последнее значение false 
+ //let x = null && 0 && 1;
+//x = null => false И false И true вернул первое значение false 
 
 //7 Чему равен x в каждом из примеров, объясните почему:
 //let x = 1 + 2 + '3';

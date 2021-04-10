@@ -28,10 +28,15 @@ let stringCounting = 'Просветление наступит через: ';
 let finish = 10;
 
 for (let i=finish; i>=1; i--){
-   stringCounting += i + ", ";
+   
+   if (i > 1){
+      stringCounting += i + ", ";
+   } else{
+      stringCounting += i
+   }
 }
 
-console.log (stringCounting.slice(0,-2));
+console.log (stringCounting);
 
 //4 Найти и вывести в консоль все нечетные числа от 1 до 20 включительно.
 
@@ -44,15 +49,7 @@ for (let i=1; i<=20; i++){
 //5 На основе строки "теперь я мастер циклов javascript" создать новую строку, где первые буквы каждого слова будут в верхнем регистре и будут отсутствовать пробелы. 
 
 let string = 'теперь я мастер циклов javascript';
-let string_new = '';
 
-string = string[0].toUpperCase() + string.substring(1)
-for (i = 0; i < string.length; i++) {
-   if (string[i-1] === " ") {
-   string_new += string[i].toUpperCase();
-    } 
-    else {
-    string_new += string[i];
-      }
-   }
-console.log(string_new.split(' ').join('')) ;  
+let stringUp = string.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('');
+
+console.log(stringUp);

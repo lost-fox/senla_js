@@ -27,8 +27,8 @@ let number = 4;
 function randomArray (number){
   let myArray = [];
 
-for (i=0; i<10; i++){
-   myArray[i] = Math.random()* (number-1) + 1;
+for (i=0; i<number; i++){
+   myArray[i] = i+1;
 }
 return myArray
 }
@@ -146,14 +146,8 @@ let startTime = 20;
 let endTime = 60;
 
 function filterServices(array,start,end){
-  let arrayFilterServices = [];
+  let arrayFilterServices = array.filter(arr =>arr.executionTime>start && arr.executionTime<end);
 
-  for (let i=0; i<array.length; i++){
-     if ((array[i].executionTime>start) && (array[i].executionTime<end)){
-      arrayFilterServices.push (array[i])
-  }
-  }
-  
   arrayFilterServices.sort((a,b) => a.executionTime - b.executionTime);
 
   return arrayFilterServices;

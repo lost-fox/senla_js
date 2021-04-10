@@ -52,15 +52,8 @@ console.log (palindr(word));
 let wordString = 'hello';
 
 function getUniCode (string){
- let splitString =  string.split('');
- let charAtString = [];
-
- for (let i=0; i<splitString.length; i++){
-      charAtString [i] = splitString[i].charCodeAt();
- }
-
-
- return charAtString.join(' ');
+ let charAtString = string.split('').map(c => c.charCodeAt()).join(' ');
+ return charAtString;
 }
 
 console.log (getUniCode(wordString));
@@ -86,13 +79,14 @@ let array = [1,2,3,4,5];
 function  getString(array, callback){
    let resultString = '';
   strings =  array.map(function (element){
-   return callback(element * 2);
+   return callback(element);
   });
    return strings.join();
 }
 console.log (getString (array,numberToString));
 
 function numberToString(number) {
+   number *=2;
    return String(number);
 }
 

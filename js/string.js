@@ -5,8 +5,9 @@ console.log (string[0]);
 console.log (string[string.length-1]);
 
 //2 Сделать первую и последнюю буквы в верхнем регистре
-console.log (string[0].toUpperCase());
-console.log (string[string.length-1].toUpperCase());
+let stringUp = string.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1,w.length-1)+ w.charAt(w.length-1).toUpperCase() ).join(' ');
+
+console.log(stringUp);
 
 //3 Найти положение слова string в строке
 console.log (string.indexOf('string'));
